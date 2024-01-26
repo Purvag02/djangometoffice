@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Your Project</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'metoffice_data_ui' %}">MetOffice Data UI</a>
+        </li>
+    </ul>
+</nav>
+{% block content %}
+<div class="container mt-4">
+    <form method="get" action="{% url 'get_metoffice_data' %}">
+        {% csrf_token %}
+        <div class="form-check">
+            {{ form.order }}
+            <label class="form-check-label" for="{{ form.order.id_for_label }}"> {{ form.order.label }}</label>
+        </div>
+        <div class="form-group">
+            <label for="{{ form.region.id_for_label }}">Region:</label>
+            {{ form.region }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.parameter.id_for_label }}">Parameter:</label>
+            {{ form.parameter }}
+        </div>
+        <button type="submit" class="btn btn-primary">Download</button>
+    </form>
+</div>
+{% endblock %}

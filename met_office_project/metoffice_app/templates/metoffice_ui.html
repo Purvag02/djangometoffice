@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MetOffice Data UI</title>
+</head>
+<body>
+    <h1>MetOffice Data UI</h1>
+    <form method="get" action="{% url 'get_metoffice_data' %}">
+        {% csrf_token %}
+        <label>
+            <input type="radio" name="order" value="ranked" checked> Ranked Order Statistics
+        </label>
+        <label>
+            <input type="radio" name="order" value="date"> Year Order Statistics
+        </label>
+        <br>
+        <label>Region:
+            <select name="region">
+                <option value="UK">UK</option>
+                <option value="England">England</option>
+                <option value="Scotland">UK</option>
+                <option value="Midland">England</option>
+                <!-- Add other options as needed -->
+            </select>
+        </label>
+        <br>
+        <label>Parameter:
+            <select name="parameter">
+                <option value="Max Temp">Max Temp</option>
+                <option value="Min Temp">Min Temp</option>
+                <option value="Mean Temp">Min Temp</option>
+                <option value="Rainfall">Min Temp</option>
+                <!-- Add other options as needed -->
+            </select>
+        </label>
+        <br>
+        <button type="submit">Download</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Met Office Weather Data UI</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <form>
+    <div class="form-group">
+      <label for="statisticsType">Order:</label>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="rankedOrder" name="statisticsType" value="ranked">
+        <label class="form-check-label" for="rankedOrder">Ranked Order Statistics</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="yearOrder" name="statisticsType" value="year">
+        <label class="form-check-label" for="yearOrder">Year Order Statistics</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="region">Region:</label>
+      <select class="form-control" id="region" name="region">
+        <option value>Choose a Region</option>
+        <option value="UK">UK</option>
+        <option value="England">England</option>
+        <option value="Scotland">Scotland</option>
+        <option value="England_S">England_S</option>
+        <option value="Wales">Wales</option>
+        <option value="Nothern_Ireland">Nothern Ireland</option>
+        <option value="England_and_Wales">England & Wales</option>
+        <option value="England_N">England N</option>
+        <option value="Scotland_N">Scotland N</option>
+        <option value="Scotland_E">Scotland E</option>
+        <option value="Scotland_W">Scotland W</option>
+        <option value="England_E_and_NE">England E/NE</option>
+        <option value="England_NW_and_N_Wales">England NW/N Wales</option>
+        <option value="Midlands">Midlands</option>
+        <option value="East_Angelia">East Angelia</option>
+        <option value="England_SW_and_S_Wales">England SW/S Wales</option>
+        <option value="England_SE_and_Central_S">England SE & Central S</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="parameter">Parameter:</label>
+      <select class="form-control" id="parameter" name="parameter">
+        <option value>Choose a Parameter</option>
+        <option value="Max Temp">Max Temp</option>
+        <option value="Min Temp">Min Temp</option>
+        <option value="Mean Temp">Mean Temp</option>
+        <option value="Sunshine">Mean Temp</option>
+        <option value="Rainfall">Rainfall</option>
+      </select>
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="downloadData()">Download</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+  // Add your JavaScript code here, if needed
+  function downloadData() {
+    // Add functionality to download data based on selected options
+    // You can use AJAX or other methods to fetch and download the data
+    alert('Downloading data...');
+  }
+</script>
+
+</body>
+</html>
