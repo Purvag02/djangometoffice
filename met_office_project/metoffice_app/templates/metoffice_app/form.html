@@ -1,0 +1,6 @@
+<!-- templates/metoffice_api/form.html -->
+<form method="post" action="{% url 'get_metoffice_data' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Get Data</button>
+</form>

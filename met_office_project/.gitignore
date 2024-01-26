@@ -1,0 +1,68 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django
+*.log
+db.sqlite3
+media/
+
+# Secret key
+secret_key.txt
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# IDE-specific files
+*.sublime-workspace
+*.komodoproject
+.project
+.pydevproject
+
+# Local development settings
+local_settings.py
+
+# Temporary files
+*.swp
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Celery
+celerybeat-schedule
+
+# Python debugger
+*.pyc
+__pycache__/
+
+# Pipenv
+Pipfile.lock
